@@ -1,0 +1,378 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background: hsl(230, 100%, 99%);
+    background-image: url(/images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: hsl (0, 0%, 100%);
+    max-width: 85%;
+    height: 100%;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3.5em 0;
+    margin-bottom: 2em;
+    background: url(/images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 10px 50px -20px hsl(225, 20%, 60%);
+}
+
+.upper {
+    box-sizing: border-box;
+    padding: 2em 3em;
+}
+
+.pricing-flex {
+    display: flex;
+    margin-top: 1em;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5em 0;
+    position: relative;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    position: relative;
+    outline: none;
+    opacity: 1;
+    border-radius: 12px;
+    background:  hsl(224, 65%, 95%);
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+}
+
+#progressBar {
+    width: 50%;
+    height: 10px;
+    background: hsl(174, 77%, 80%);
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#selector {
+    height: 38px;
+    width: 38px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: hsl(174, 86%, 45%);
+    box-sizing: border-box;
+}
+
+.selectBtn {
+    height: 23px;
+    width: 23px;
+    background-image: url(/images/icon-slider.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.billing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.monthly {
+    display: flex;
+    align-items: center;
+    margin-left: 5.5em;
+}
+.toggle-container {
+    margin: 0 1.5em;
+}
+
+#toggle {
+    -webkit-appearance: none;
+    position: relative;
+    width: 35px;
+    height: 18px;
+    background: #ccc;
+    outline: none;
+    border-radius: 10px;
+    transition: background .3s;
+    cursor: pointer;
+}
+
+#toggle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background: #fff;
+    transition: left .3s;
+}
+
+#toggle:checked {
+    background: hsl(174, 86%, 45%);
+}
+
+#toggle:checked::after {
+    left: 70%;
+}
+
+.yearly {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.discount {
+    border-radius: 12px;
+    background: hsl(14, 92%, 95%);
+    padding: 0.1em 0.4em;
+    margin-left: .5em;
+}
+
+
+
+.lower {
+    border-top: .5px solid #ccc;
+    padding: 2em 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ppties-list ul {
+    list-style: none;
+}
+
+li {
+    margin: .5em 0;
+}
+
+li img {
+    margin-right: .8em;
+}
+
+button {
+    padding: .9em 2.5em;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background: hsl(227, 35%, 25%);
+    color: hsl(226, 100%, 87%);
+    font-size: .8rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #fff;
+}
+
+/* TYPOGRRPHY */
+
+.heading h2 {
+    font-size: 2rem;
+    margin-bottom: .5em;
+    color: hsl(227, 35%, 25%);
+}
+
+.heading h3 {
+    font-size: 1rem;
+    color: hsl(225, 20%, 60%);
+    font-weight: 600;
+}
+
+.pv h3 {
+    font-size: .9rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: hsl(225, 20%, 60%);
+    font-weight: 600;
+}
+
+.price h2 {
+    font-size: 2.4rem;
+    margin-right: .1em;
+    color: hsl(227, 35%, 25%);
+}
+
+.price h3 {
+    font-size: .9rem;
+    color: hsl(225, 20%, 60%);
+    font-weight: 600;
+}
+
+.discount p {
+    color: hsl(15, 100%, 70%);
+    font-size: 0.7rem;
+    font-weight: 800;
+    
+}
+
+.billing h4 {
+    font-size: 0.8rem;
+    color: hsl(225, 20%, 60%);
+    font-weight: 500;
+}
+
+li {
+    font-size: .8rem;
+    color: hsl(225, 20%, 60%);
+}
+
+/* RESPONSIVENESS */
+
+
+@media (max-width: 428px) {
+
+    .heading {
+        margin-bottom: 0;
+    }
+
+    .heading h2 {
+        font-size: 1.4rem;
+        margin-bottom: .5em;
+        color: hsl(227, 35%, 25%);
+        width: 100%;
+    }
+
+    .heading h3 {
+        width: 70%;
+        margin: 0 auto;
+        font-weight: 600;
+    }
+    
+    .pricing-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pv {
+        margin-bottom: 1em;
+    }
+
+    .billing {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .5em 0;
+        margin-bottom: 1em;
+    }
+    
+    .monthly {
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .monthly h4 {
+        width: 100px;
+        text-align: center;
+    }
+
+    .toggle-container {
+        margin: 0 0.5em;
+        display: flex;
+        align-items: center;
+    }
+
+    .yearly {
+        display: flex;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .yearly h4 {
+        width: 75px;
+        text-align: center;
+        
+    }
+
+    .discount {
+        margin-left: .4em;
+    }
+
+    span {
+        display: none;
+    }
+
+    .lower {
+        flex-direction: column;
+        padding: 1em 3em;
+    }
+
+    .ppties-list {
+        text-align: center;
+    }
+
+    button {
+        margin: 1em 0;
+    }
+}
